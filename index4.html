@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKPD 5</title>
+</head>
+<body>
+    <script>
+        let pabp= 70;
+        let mtk = 82;
+        let dpk = 77;
+        
+        let rata = (pabp+mtk+dpk)/3
+        
+        if(rata>=80 && nilai<=100){
+            maka = "A"
+        }else if (rata<=80 && rata>=75){
+            maka = "B"
+        }else if (rata<=75 && rata>=65){
+            maka = "C"
+        }else if (rata<=65 && rata>=45){
+            maka = "D"
+        }else if (rata<=65 && rata>=45){
+            maka = "E"
+        }else{
+            maka  = "k"
+        }
+        
+        console.log(`nilai yang di dapat adalah grade ${maka}`)
+        
+        
+        let kode  = 22505197803
+        
+        let golongan = Math.floor(kode/10000000000)
+        let tanggal = Math.floor((kode/100000000)%100)
+        let bulan = Math.floor((kode/1000000)%100)
+        let tahun = Math.floor((kode/100)%10000)
+        let nn = kode%100
+        
+        console.log(golongan)
+        console.log(tanggal)
+        console.log(bulan)
+        console.log(tahun)
+        console.log(nn)
+        
+        if(nn >= 1 && nn <=4) {
+            let bln;
+            switch(bulan) {
+                case 1:bln="jan";break
+                case 2:bln="feb";break
+                case 3:bln="mar";break
+                case 4:bln="apr";break
+                case 5:bln="mei";break
+                case 6:bln="juni";break
+                case 7:bln="juli";break
+                case 8:bln="ags";break
+                case 9:bln="sep";break
+                case 10:bln= "okt";break
+                case 11:bln="nov";break
+                case 12:bln="des";break
+                default : bln ='invalid'
+            }
+        
+            console.log(`seorang pegawai bergolongan ${golongan}, lahir pada tanggal ${tanggal}`)
+        } else {
+            console.log ("golongan tidak boleh melebihi 1-4")
+        }
+        
+              
+        let jam = 2;
+        let menit = 50;
+        let detik = 40;
+        let tambahdetik = detik+1;
+        
+        if(tambahdetik > 59) {
+            hasildetik = 0;
+            hasilmenit = menit + 1;
+            hasiljam = jam + 1;
+        }
+        if(jam > 23) {
+            hasildetik = hasildetik;
+            hasilmenit = menit + 1;
+            hasiljam = 0;
+        } 
+        
+        let hh = 23;
+        let mm = 59;
+        let ss = 58;
+        let hasil = ss + 1;
+        if(hasil >59) {
+            ss = 0;
+            mm = mm + 1;
+            if(mm > 59) {
+                mm = 0;
+                hh = hh + 1;
+            }
+            if(hh > 23) {
+                hh = 0
+                mm = 0
+                ss = 0
+            }
+        
+            console.log(`${hh} jam ${mm} menit ${ss} detik`);
+        } else {
+            console.log(`${hh} jam ${mm} menit ${ss} detik`)
+        }</script>
+</body>
+</html>
